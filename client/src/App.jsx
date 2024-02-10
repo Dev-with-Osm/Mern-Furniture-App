@@ -1,5 +1,12 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
 
 export default function App() {
-  return <div className="bg-slate-300">App</div>;
+  return (
+    <BrowserRouter>
+      <Header />
+      {/* <Routes></Routes> */}
+    </BrowserRouter>
+  );
 }
