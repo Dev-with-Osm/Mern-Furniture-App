@@ -15,7 +15,7 @@ import { EffectCreative, Autoplay } from "swiper/modules";
 
 export default function App() {
   return (
-    <div className="p-3 overflow-hidden">
+    <div className="">
       <Swiper
         autoplay={{
           delay: 2000,

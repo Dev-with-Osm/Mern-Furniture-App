@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { RiMenu3Line } from "react-icons/ri";
+import { RiMenu2Line } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
 import { IoBagOutline } from "react-icons/io5";
 import { GoSearch } from "react-icons/go";
@@ -34,7 +34,14 @@ export default function Header() {
 
   return (
     <nav className="w-full shadow-md">
-      <div className="h-10vh flex justify-between z-50 max-w-6xl mx-auto text-black md:py-5 px-10 py-4">
+      <div className="h-10vh flex justify-between z-50 max-w-6xl mx-auto text-black md:py-5 px-5 py-4">
+        <div>{click && content}</div>
+        <button
+          className="block sm:hidden transition-all text-2xl mr-2"
+          onClick={handleMenu}
+        >
+          {click ? <IoMdClose /> : <RiMenu2Line />}
+        </button>
         <div className="flex items-center flex-1">
           <span className="text-2xl font-semibold">MODERNA</span>
         </div>
@@ -56,21 +63,20 @@ export default function Header() {
             </ul>
           </div>
         </div>
-        <div className="flex mr-5 text-2xl gap-5">
+        <div className="flex items-center text-2xl gap-5">
           <button>
             <GoSearch />
           </button>
           <button>
             <IoBagOutline />
           </button>
+          <button className="w-7 h-7 md:w-8 md:h-8 rounded-full overflow-hidden flex items-center">
+            <img
+              src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+              alt=""
+            />
+          </button>
         </div>
-        <div>{click && content}</div>
-        <button
-          className="block sm:hidden transition-all text-2xl"
-          onClick={handleMenu}
-        >
-          {click ? <IoMdClose /> : <RiMenu3Line />}
-        </button>
       </div>
     </nav>
   );
