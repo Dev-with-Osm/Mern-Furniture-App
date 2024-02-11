@@ -11,11 +11,11 @@ export default function Header() {
 
   const content = (
     <div
-      className={`md:hidden block absolute top-16 w-full left-0 right-0 z-50 backdrop-filter backdrop-blur-xl  transition-all ${
+      className={`md:hidden block absolute top-16 w-full left-0 right-0 z-50 backdrop-filter backdrop-blur-xl h-screen transition-all ${
         click ? "ease-in" : "ease-out"
       }`}
     >
-      <ul className="text-center p-20 text-lg">
+      <ul className="text-center py-10 text-lg">
         <Link to={"/"}>
           <li className="my-4 py-4 border-b border-slate-400">Home</li>
         </Link>
@@ -33,8 +33,8 @@ export default function Header() {
   );
 
   return (
-    <nav className="w-full shadow-md">
-      <div className="h-10vh flex justify-between z-50 max-w-6xl mx-auto text-black md:py-5 px-5 py-4">
+    <nav className="w-full shadow-md ">
+      <div className="h-10vh flex justify-between items-center z-50 md:max-w-6xl mx-auto text-black md:py-5 px-8 py-4">
         <div>{click && content}</div>
         <button
           className="block sm:hidden transition-all text-2xl mr-2"
@@ -70,12 +70,15 @@ export default function Header() {
           <button>
             <IoBagOutline />
           </button>
-          <button className="w-7 h-7 md:w-8 md:h-8 rounded-full overflow-hidden flex items-center">
+          <Link
+            to={"/signIn"}
+            className="w-7 h-7 md:w-8 md:h-8 rounded-full overflow-hidden flex items-center"
+          >
             <img
               src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
               alt=""
             />
-          </button>
+          </Link>
         </div>
       </div>
     </nav>
