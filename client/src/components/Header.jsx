@@ -11,7 +11,7 @@ export default function Header() {
 
   const content = (
     <div
-      className={`md:hidden block absolute top-16 w-full left-0 right-0 backdrop-filter backdrop-blur-xl transition-all ${
+      className={`md:hidden block absolute top-16 w-full left-0 right-0 z-50 backdrop-filter backdrop-blur-xl  transition-all ${
         click ? "ease-in" : "ease-out"
       }`}
     >
