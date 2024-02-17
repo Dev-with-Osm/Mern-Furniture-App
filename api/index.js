@@ -1,10 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const cookieParser = require("cookie-parser");
 const authRouter = require("./routes/auth.route.js");
 dotenv.config();
 
 const app = express();
+app.use(cookieParser());
 app.use(express.json());
 const mongoUrl = process.env.MONGO_URL;
 mongoose.connect(mongoUrl).then(() => {

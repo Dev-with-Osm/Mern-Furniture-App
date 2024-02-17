@@ -28,7 +28,11 @@ module.exports.signin = async (req, res, next) => {
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
 
     const { password: pass, ...rest } = user._doc;
-    res.json(rest).status(200).cookie("token", token, { httpOnly: true });
+
+    res
+      .cookie("access_token", token, { httpOnly: true })
+      .status(200)
+      .json(rest); // Fix the usage of res.json() and res.status()
   } catch (error) {
     next(error);
   }
