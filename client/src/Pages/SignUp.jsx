@@ -50,7 +50,7 @@ export default function SignUp() {
       <h1 className="mb-10 text-2xl font-semibold">Sign Up</h1>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col gap-5 bg-transparent border-2 border-black p-8 md:w-[450px] rounded-lg font-sans"
+        className="flex flex-col gap-5 bg-transparent border-2 border-black p-8 md:w-[450px] rounded-lg "
       >
         <div className="flex flex-col gap-4">
           <label className="text-black font-semibold">Username</label>
