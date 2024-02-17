@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { CiAt } from "react-icons/ci";
 import { IoLockClosedOutline } from "react-icons/io5";
-import { FcGoogle } from "react-icons/fc";
-import { FaApple } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { loginFailed, loginStart, loginSuccess } from "../redux/user/userSlice";
+import OAuth from "../components/GoogleOAuth";
+import FbOAuth from "../components/FbOAuth";
 
 export default function SignIn() {
   const { loading, error } = useSelector((state) => state.user);
@@ -44,7 +44,7 @@ export default function SignIn() {
   };
 
   return (
-    <div className="flex flex-col mt-10 justify-center items-center p-2">
+    <div className="flex flex-col my-10 justify-center items-center p-2">
       <h1 className="mb-10 text-2xl font-semibold">Sign In</h1>
       <form
         onSubmit={handleSubmit}
@@ -100,20 +100,8 @@ export default function SignIn() {
         <p className="text-center">Or With</p>
 
         <div className="  flex justify-around gap-4">
-          <button
-            type="button"
-            className="flex items-center border-2 px-7 md:px-10 py-2 rounded-lg shadow-md font-semibold gap-2"
-          >
-            <FcGoogle className="text-xl" />
-            Google
-          </button>
-          <button
-            type="button"
-            className="flex items-center border-2 px-7 md:px-10 py-2 rounded-lg shadow-md font-semibold gap-2"
-          >
-            <FaApple className="text-xl" />
-            Apple
-          </button>
+          <OAuth />
+          <FbOAuth />
         </div>
       </form>
     </div>
