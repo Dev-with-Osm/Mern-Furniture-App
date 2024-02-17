@@ -4,11 +4,12 @@ import { RiMenu2Line } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
 import { IoBagOutline } from "react-icons/io5";
 import { GoSearch } from "react-icons/go";
+import { useSelector } from "react-redux";
 
 export default function Header() {
+  const { currentUser } = useSelector((state) => state.user);
   const [click, setClick] = useState(false);
   const handleMenu = () => setClick(!click);
-
   const content = (
     <div
       className={`md:hidden block absolute top-16 w-full left-0 right-0 z-50 backdrop-filter backdrop-blur-xl h-screen transition-all ${
@@ -71,13 +72,17 @@ export default function Header() {
             <IoBagOutline />
           </button>
           <Link
-            to={"/signIn"}
+            to="/profile"
             className="w-7 h-7 md:w-8 md:h-8 rounded-full overflow-hidden flex items-center"
           >
-            <img
-              src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
-              alt=""
-            />
+            {currentUser ? (
+              <img src={currentUser.avatar} alt="" />
+            ) : (
+              <img
+                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                alt=""
+              />
+            )}
           </Link>
         </div>
       </div>

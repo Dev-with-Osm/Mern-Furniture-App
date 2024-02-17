@@ -6,6 +6,7 @@ import Products from "./Pages/Products";
 import Profile from "./Pages/Profile";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
+import PrivateRoute from "./components/PrivateRoute";
 
 export default function App() {
   return (
@@ -17,7 +18,9 @@ export default function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/signIn" element={<SignIn />} />
         <Route path="/signUp" element={<SignUp />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route element={<PrivateRoute />}>
+          <Route path="/profile" element={<Profile />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

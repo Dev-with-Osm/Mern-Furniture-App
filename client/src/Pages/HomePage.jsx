@@ -5,7 +5,7 @@ import HomeSlider from "../components/HomeSlider";
 export default function HomePage() {
   return (
     <>
-      <div class=" flex flex-col md:items-center md:gap-20 md:justify-between  mt-14  max-w-6xl mx-auto">
+      <div className=" flex flex-col md:items-center md:gap-20 md:justify-between  mt-14  max-w-6xl mx-auto">
         <div className=" text-center  flex flex-col gap-4 md:gap-8">
           <h1 className="text-4xl md:text-6xl font-semibold tracking-wide ">
             Exotic minimal <br /> furniture.
