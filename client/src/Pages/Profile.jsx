@@ -14,6 +14,9 @@ import {
   deleteUserFailed,
   deleteUserStart,
   deleteUserSuccess,
+  signOutUserFailed,
+  signOutUserStart,
+  signOutUserSuccess,
   updateUserFailed,
   updateUserStart,
   updateUserSuccess,
@@ -113,6 +116,20 @@ export default function Profile() {
     }
   };
 
+  const handleSignOutUser = async () => {
+    try {
+      dispatch(signOutUserStart());
+      const res = await fetch("/api/auth/signout");
+      const data = await res.json();
+      if (data.success === false) {
+        dispatch(signOutUserFailed("Error signing out"));
+        return;
+      }
+      dispatch(signOutUserSuccess(data));
+    } catch (error) {
+      dispatch(signOutUserFailed(error.message));
+    }
+  };
   return (
     <div className="flex flex-col my-10 justify-center items-center p-2">
       <h1 className="flex items-center justify-center text-2xl gap-2 mb-4 font-medium">
@@ -205,7 +222,7 @@ export default function Profile() {
         <p className="text-center text-red-700 text-sm">{error ? error : ""}</p>
         <div className="flex justify-between items-center text-sm text-red-600">
           <button onClick={handleDeleteUser}>Delete Account</button>
-          <button>Logout</button>
+          <button onClick={handleSignOutUser}>Logout</button>
         </div>
       </form>
     </div>
