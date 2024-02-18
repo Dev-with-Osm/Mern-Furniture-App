@@ -35,6 +35,7 @@ export default function SignUp() {
         setError("Sign In failed ! Please check your credentials.");
 
         setLoading(false);
+        return;
       } else {
         setLoading(false);
         setError(null);
