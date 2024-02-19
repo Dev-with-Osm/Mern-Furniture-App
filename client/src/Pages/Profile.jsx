@@ -21,10 +21,12 @@ import {
   updateUserStart,
   updateUserSuccess,
 } from "../redux/user/userSlice";
+import { useNavigate } from "react-router-dom";
 
 export default function Profile() {
   const fileRef = useRef(null);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { currentUser, loading, error } = useSelector((state) => state.user);
   const [file, setFile] = useState(undefined);
   const [filePerc, setFilePerc] = useState(0);
@@ -95,7 +97,7 @@ export default function Profile() {
       dispatch(updateUserSuccess(data));
       setUpdateSuccess(true);
     } catch (error) {
-      dispatch(updateUserFailed("Something went wrong!"));
+      dispatch(updateUserFailed(""));
     }
   };
 
@@ -126,6 +128,7 @@ export default function Profile() {
         return;
       }
       dispatch(signOutUserSuccess(data));
+      navigate("/");
     } catch (error) {
       dispatch(signOutUserFailed(error.message));
     }

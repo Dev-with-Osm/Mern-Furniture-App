@@ -2,11 +2,12 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import HomePage from "./Pages/HomePage";
-import Products from "./Pages/Products";
+
 import Profile from "./Pages/Profile";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
 import PrivateRoute from "./components/PrivateRoute";
+import Products from "./Pages/Products/Products";
 
 export default function App() {
   return (

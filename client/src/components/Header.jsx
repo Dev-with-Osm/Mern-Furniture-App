@@ -20,14 +20,15 @@ export default function Header() {
         <Link to={"/"}>
           <li className="my-4 py-4 border-b border-slate-400">Home</li>
         </Link>
-        <Link to={"/furniture"}>
-          <li className="my-4 py-4 border-b border-slate-400">Furniture</li>
-        </Link>
         <Link to={"products"}>
           <li className="my-4 py-4 border-b border-slate-400">Products</li>
         </Link>
+        <Link to={"/furniture"}>
+          <li className="my-4 py-4 border-b border-slate-400">About Us</li>
+        </Link>
+
         <Link to={"store"}>
-          <li className="my-4 py-4 border-b border-slate-400">Store</li>
+          <li className="my-4 py-4 border-b border-slate-400">Our Store</li>
         </Link>
       </ul>
     </div>
@@ -52,14 +53,15 @@ export default function Header() {
               <Link to={"/"}>
                 <li>Home</li>
               </Link>
-              <Link to={"/furniture"}>
-                <li>Furniture</li>
-              </Link>
               <Link to={"products"}>
                 <li>Products</li>
               </Link>
+              <Link to={"/furniture"}>
+                <li>About Us</li>
+              </Link>
+
               <Link to={"store"}>
-                <li>Store</li>
+                <li>Our Store</li>
               </Link>
             </ul>
           </div>
