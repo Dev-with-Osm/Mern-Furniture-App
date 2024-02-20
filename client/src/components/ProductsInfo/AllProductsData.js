@@ -11,6 +11,7 @@ export const AllProductsData = [
     ],
     oldPrice: "2578,00",
     newPrice: "2000,00",
+    tags: ["chairs", "modern", "Latest"],
     description:
       "Le rocking chair MATTI en coloris rouge et revêtue en tissu, elle est composée d’un dossier courbé, d’une assise à coussin, des accoudoirs et d’un piétement en hêtre de bois massif. La chaise MATTI se distingue par un dossier idéal pour se détendre, une assise confortable, des accoudoirs pour reposer les bras, ainsi que des pieds reliés par deux bandes latérales incurvées ajoutant confort à l’assise. La chaise MATTI s’harmonisera dans les chambres à coucher ainsi qu’au jardin où vous pouvez vous détendre et jouir d’une belle journée. Ce dispositif est excellent pour une petite touche de nouveauté au sein de votre déco MATTI.",
   },
@@ -26,6 +27,7 @@ export const AllProductsData = [
     ],
     oldPrice: "2578,00",
     newPrice: "2000,00",
+    tags: ["chairs", "modern", "Latest"],
     description:
       "Le rocking chair MATTI en coloris rouge et revêtue en tissu, elle est composée d’un dossier courbé, d’une assise à coussin, des accoudoirs et d’un piétement en hêtre de bois massif. La chaise MATTI se distingue par un dossier idéal pour se détendre, une assise confortable, des accoudoirs pour reposer les bras, ainsi que des pieds reliés par deux bandes latérales incurvées ajoutant confort à l’assise. La chaise MATTI s’harmonisera dans les chambres à coucher ainsi qu’au jardin où vous pouvez vous détendre et jouir d’une belle journée. Ce dispositif est excellent pour une petite touche de nouveauté au sein de votre déco MATTI.",
   },
@@ -41,6 +43,7 @@ export const AllProductsData = [
     ],
     oldPrice: "2578,00",
     newPrice: "2000,00",
+    tags: ["chairs", "modern", "Latest"],
     description:
       "Le rocking chair MATTI en coloris rouge et revêtue en tissu, elle est composée d’un dossier courbé, d’une assise à coussin, des accoudoirs et d’un piétement en hêtre de bois massif. La chaise MATTI se distingue par un dossier idéal pour se détendre, une assise confortable, des accoudoirs pour reposer les bras, ainsi que des pieds reliés par deux bandes latérales incurvées ajoutant confort à l’assise. La chaise MATTI s’harmonisera dans les chambres à coucher ainsi qu’au jardin où vous pouvez vous détendre et jouir d’une belle journée. Ce dispositif est excellent pour une petite touche de nouveauté au sein de votre déco MATTI.",
   },
