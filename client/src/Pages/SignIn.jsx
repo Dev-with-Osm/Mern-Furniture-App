@@ -9,6 +9,7 @@ import FbOAuth from "../components/FbOAuth";
 
 export default function SignIn() {
   const { loading, error } = useSelector((state) => state.user);
+
   const [formData, setFormData] = useState({});
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -33,13 +34,13 @@ export default function SignIn() {
       const data = await res.json();
       console.log(data);
       if (data.success === false) {
-        dispatch(loginFailed(data.message));
+        dispatch(loginFailed("Something went wrong!"));
         return;
       }
       dispatch(loginSuccess(data));
       navigate("/");
     } catch (error) {
-      dispatch(loginFailed(error.message));
+      dispatch(loginFailed("Something went wrong!"));
     }
   };
 

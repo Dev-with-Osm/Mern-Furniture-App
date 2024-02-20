@@ -45,7 +45,9 @@ export default function Header() {
           {click ? <IoMdClose /> : <RiMenu2Line />}
         </button>
         <div className="flex items-center flex-1">
-          <span className="text-2xl font-semibold">MODERNA</span>
+          <Link to={"/"} className="text-2xl font-semibold">
+            MODERNA
+          </Link>
         </div>
         <div className="md:flex hidden md:flex-1 items-center justify-end ">
           <div className="flex-10">

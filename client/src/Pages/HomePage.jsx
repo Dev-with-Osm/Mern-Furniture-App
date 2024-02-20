@@ -15,7 +15,10 @@ export default function HomePage() {
             quality wooden furniture pieces online.
           </h6>
           <div className="mt-3">
-            <Link className="border-2 py-2 px-4 md:py-3.5 md:px-10  border-black bg-gray-900 shadow-black shadow-md text-white hover:bg-transparent hover:text-black font-medium transition-all ease-in-out">
+            <Link
+              to={"/products"}
+              className="border-2 py-2 px-4 md:py-3.5 md:px-10  border-black bg-gray-900 shadow-black shadow-md text-white hover:bg-transparent hover:text-black font-medium transition-all ease-in-out"
+            >
               Explore
             </Link>
           </div>
